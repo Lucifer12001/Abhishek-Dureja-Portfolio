@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abhishek Dureja | Portfolio</title>
+  <title>Abhishek Dureja | Portfolio 2.0</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
@@ -13,16 +13,30 @@
     body {
       font-family: 'Poppins', sans-serif;
     }
+    .floating-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      background: radial-gradient(circle at top left, rgba(99, 102, 241, 0.15), transparent),
+                  radial-gradient(circle at bottom right, rgba(236, 72, 153, 0.15), transparent);
+      animation: float 10s ease-in-out infinite alternate;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-20px); }
+    }
   </style>
 </head>
-<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
-  <!-- Navbar -->
+<body class="relative bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
+  <div class="floating-bg"></div>
   <nav class="fixed w-full bg-white dark:bg-gray-800 shadow z-50">
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
       <h1 class="text-xl font-bold text-indigo-600">Abhishek Dureja</h1>
       <ul class="hidden md:flex space-x-6 font-medium">
         <li><a href="#about" class="hover:text-indigo-600">About</a></li>
-        <li><a href="#experience" class="hover:text-indigo-600">Experience</a></li>
         <li><a href="#projects" class="hover:text-indigo-600">Projects</a></li>
         <li><a href="#skills" class="hover:text-indigo-600">Skills</a></li>
         <li><a href="#certifications" class="hover:text-indigo-600">Certifications</a></li>
@@ -34,8 +48,7 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="h-screen flex items-center justify-center flex-col text-center px-4" id="home">
+  <section class="h-screen flex items-center justify-center flex-col text-center px-4 relative z-10" id="home">
     <h1 class="text-4xl md:text-6xl font-extrabold mb-4" data-aos="fade-up">Hi, I'm <span class="text-indigo-600">Abhishek Dureja</span></h1>
     <h2 class="text-xl md:text-2xl font-medium text-gray-600 dark:text-gray-300" id="typingText" data-aos="fade-up" data-aos-delay="200"></h2>
     <div class="mt-6 flex space-x-4" data-aos="fade-up" data-aos-delay="400">
@@ -44,84 +57,39 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="max-w-4xl mx-auto px-4 py-20" data-aos="fade-up">
+  <section id="about" class="max-w-4xl mx-auto px-4 py-20 relative z-10" data-aos="fade-up">
     <h2 class="text-3xl font-bold text-indigo-600 mb-4">About Me</h2>
-    <p class="text-lg leading-relaxed">I am a Computer Science undergraduate with a deep interest in AI, Machine Learning, and Data Science. I've interned at industry leaders like Affine Analytics and Lyxel Labs and built smart systems that solve real-world problems with cutting-edge tech like LLMs, Gen AI, and Power BI.</p>
+    <p class="text-lg leading-relaxed">I’m a Computer Science student passionate about building AI-powered solutions that matter. From cutting-edge LLM experiments to business-focused analytics dashboards, I blend tech curiosity with real-world problem-solving. My experience spans ML, Gen AI, BI tools, and full-stack prototypes — all aimed at one thing: results that impress.</p>
   </section>
 
-  <!-- Experience Section -->
-  <section id="experience" class="bg-gray-50 dark:bg-gray-800 py-20 px-4" data-aos="fade-up">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold text-indigo-600 mb-8">Experience</h2>
-      <div class="space-y-8">
-        <div class="bg-white dark:bg-gray-700 rounded-lg p-6 shadow">
-          <h3 class="text-xl font-semibold">Data Analyst Intern – Lyxel Labs</h3>
-          <p class="text-sm text-gray-500 dark:text-gray-300">Apr 2025 – Present</p>
-          <ul class="list-disc ml-5 mt-2 space-y-1">
-            <li>Built features for Weavr, an e-commerce analytics platform</li>
-            <li>Delivered end-to-end insights across brand datasets</li>
-            <li>Worked across UI/backend/data scraping in SDLC</li>
-          </ul>
-        </div>
-        <div class="bg-white dark:bg-gray-700 rounded-lg p-6 shadow">
-          <h3 class="text-xl font-semibold">AI Intern – Affine Analytics</h3>
-          <p class="text-sm text-gray-500 dark:text-gray-300">Dec 2024 – Mar 2025</p>
-          <ul class="list-disc ml-5 mt-2 space-y-1">
-            <li>Built live-streaming avatar with RAG and LLMs</li>
-            <li>Applied quantization for performance tuning</li>
-            <li>Integrated Light RAG for scalable NLP systems</li>
-          </ul>
-        </div>
-        <div class="bg-white dark:bg-gray-700 rounded-lg p-6 shadow">
-          <h3 class="text-xl font-semibold">AI Trainee – Intel (CU)</h3>
-          <p class="text-sm text-gray-500 dark:text-gray-300">June 2023 – July 2023</p>
-          <ul class="list-disc ml-5 mt-2 space-y-1">
-            <li>Completed AI Competence training program</li>
-            <li>Worked with tools: Tableau, Orange, Weka</li>
-            <li>Collaborated with experts on AI modules</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 px-4" data-aos="fade-up">
+  <section id="projects" class="py-20 px-4 bg-gray-100 dark:bg-gray-800 relative z-10" data-aos="fade-up">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-3xl font-bold text-indigo-600 mb-10">Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Project Cards -->
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition-transform">
+      <div class="flex flex-wrap gap-3 mb-6">
+        <button class="filter-btn bg-indigo-100 dark:bg-indigo-600 px-4 py-1 rounded-full text-sm" data-filter="all">All</button>
+        <button class="filter-btn bg-indigo-100 dark:bg-indigo-600 px-4 py-1 rounded-full text-sm" data-filter="ai">AI</button>
+        <button class="filter-btn bg-indigo-100 dark:bg-indigo-600 px-4 py-1 rounded-full text-sm" data-filter="bi">BI</button>
+        <button class="filter-btn bg-indigo-100 dark:bg-indigo-600 px-4 py-1 rounded-full text-sm" data-filter="web">Web</button>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projectGrid">
+        <div class="project-card bg-white dark:bg-gray-700 p-6 rounded-lg shadow transition-transform" data-category="ai">
           <h3 class="text-xl font-semibold mb-2 text-indigo-600">Air Quality Prediction</h3>
-          <p>ML + Power BI system predicting air pollution with 96.8% accuracy.</p>
+          <p class="text-sm">ML model with 96.8% accuracy and Power BI integration</p>
         </div>
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition-transform">
+        <div class="project-card bg-white dark:bg-gray-700 p-6 rounded-lg shadow transition-transform" data-category="bi">
           <h3 class="text-xl font-semibold mb-2 text-indigo-600">Hospitality Revenue Dashboard</h3>
-          <p>Power BI dashboard revealing trends in customer and revenue behavior.</p>
+          <p class="text-sm">BI dashboard showing customer insights and revenue KPIs</p>
         </div>
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition-transform">
-          <h3 class="text-xl font-semibold mb-2 text-indigo-600">Diwali Sales EDA</h3>
-          <p>Exploratory Data Analysis to uncover insights from sales and customer behavior.</p>
-        </div>
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition-transform">
-          <h3 class="text-xl font-semibold mb-2 text-indigo-600">Vehicle Plate Detection</h3>
-          <p>OpenCV + OCR solution to detect and track vehicle registration plates.</p>
-        </div>
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition-transform">
-          <h3 class="text-xl font-semibold mb-2 text-indigo-600">COVID-19 Predictor</h3>
-          <p>ML classification model to predict COVID status based on symptom data.</p>
-        </div>
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition-transform">
+        <div class="project-card bg-white dark:bg-gray-700 p-6 rounded-lg shadow transition-transform" data-category="web">
           <h3 class="text-xl font-semibold mb-2 text-indigo-600">Library Management System</h3>
-          <p>PHP + Figma-based library system for cataloging, reservations, and user tracking.</p>
+          <p class="text-sm">Full-stack PHP system for reservations and UI workflows</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="py-20 px-4 bg-gray-100 dark:bg-gray-800" data-aos="fade-up">
+  <section id="skills" class="py-20 px-4 bg-white dark:bg-gray-900 relative z-10" data-aos="fade-up">
     <div class="max-w-5xl mx-auto">
       <h2 class="text-3xl font-bold text-indigo-600 mb-6">Skills</h2>
       <div class="flex flex-wrap gap-3 text-sm">
@@ -132,22 +100,20 @@
         <span class="bg-indigo-100 dark:bg-indigo-600 text-indigo-800 dark:text-white px-3 py-1 rounded-full">Scikit-learn</span>
         <span class="bg-indigo-100 dark:bg-indigo-600 text-indigo-800 dark:text-white px-3 py-1 rounded-full">TensorFlow</span>
         <span class="bg-indigo-100 dark:bg-indigo-600 text-indigo-800 dark:text-white px-3 py-1 rounded-full">PyTorch</span>
-        <span class="bg-indigo-100 dark:bg-indigo-600 text-indigo-800 dark:text-white px-3 py-1 rounded-full">Machine Learning</span>
         <span class="bg-indigo-100 dark:bg-indigo-600 text-indigo-800 dark:text-white px-3 py-1 rounded-full">Gen AI</span>
         <span class="bg-indigo-100 dark:bg-indigo-600 text-indigo-800 dark:text-white px-3 py-1 rounded-full">LLMs</span>
         <span class="bg-indigo-100 dark:bg-indigo-600 text-indigo-800 dark:text-white px-3 py-1 rounded-full">RAG</span>
         <span class="bg-indigo-100 dark:bg-indigo-600 text-indigo-800 dark:text-white px-3 py-1 rounded-full">AWS</span>
         <span class="bg-indigo-100 dark:bg-indigo-600 text-indigo-800 dark:text-white px-3 py-1 rounded-full">ETL</span>
-        <span class="bg-indigo-100 dark:bg-indigo-600 text-indigo-800 dark:text-white px-3 py-1 rounded-full">Excel</span>
-        <span class="bg-indigo-100 dark:bg-indigo-600 text-indigo-800 dark:text-white px-3 py-1 rounded-full">Data Visualization</span>
+        <span class="bg-indigo-100 dark:bg-indigo-600 text-indigo-800 dark:text-white px-3 py-1 rounded-full">Machine Learning</span>
       </div>
     </div>
   </section>
 
   <!-- Certifications Section -->
-  <section id="certifications" class="py-20 px-4" data-aos="fade-up">
+  <section id="certifications" class="py-20 px-4 bg-gray-100 dark:bg-gray-800 relative z-10" data-aos="fade-up">
     <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold text-indigo-600 mb-6">Achievements & Certifications</h2>
+      <h2 class="text-3xl font-bold text-indigo-600 mb-6">Certifications</h2>
       <ul class="list-disc ml-6 space-y-2">
         <li>✅ 25-hour Data Science & Machine Learning Bootcamp – Udemy (2024)</li>
         <li>✅ Introduction to Data Science – IBM Skills Network (2023)</li>
@@ -159,10 +125,10 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-20 px-4 bg-gray-50 dark:bg-gray-900" data-aos="fade-up">
+  <section id="contact" class="py-20 px-4 bg-white dark:bg-gray-900 relative z-10" data-aos="fade-up">
     <div class="max-w-3xl mx-auto text-center">
       <h2 class="text-3xl font-bold text-indigo-600 mb-6">Contact Me</h2>
-      <p class="text-lg mb-6">I'd love to connect or collaborate. Reach out to me here 👇</p>
+      <p class="text-lg mb-6">Let's connect and discuss opportunities, collaborations or just say hello 👋</p>
       <div class="space-y-3">
         <p><i class="fa-solid fa-envelope mr-2"></i><a href="mailto:abhishek.dureja321@gmail.com" class="hover:underline">abhishek.dureja321@gmail.com</a></p>
         <p><i class="fa-brands fa-linkedin mr-2"></i><a href="https://www.linkedin.com/in/abhishek-dureja-524812217/" target="_blank" class="hover:underline">LinkedIn</a></p>
@@ -171,10 +137,10 @@
     </div>
   </section>
 
-  <!-- Scripts -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+  <script defer src="script.js"></script>
 </body>
 </html>
