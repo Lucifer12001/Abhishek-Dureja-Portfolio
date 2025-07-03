@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Typing Effect
 const typingText = document.getElementById("typingText");
-const roles = ["Data Scientist", "AI Engineer", "Data Analyst", "ML Intern", "Tech Enthusiast"];
+const roles = ["Data Analyst","Data Scientist", "AI Engineer", "ML Engineer"];
 let roleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
