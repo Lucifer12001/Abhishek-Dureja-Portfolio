@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Typing animation
   const typingText = document.getElementById("typingText");
-  const roles = ["Data Scientist", "AI Engineer", "Data Analyst", "ML Engineer", "Tech Enthusiast"];
+  const roles = ["Data Analyst", "Data Scientist", "AI Engineer", "ML Engineer"];
   let roleIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
